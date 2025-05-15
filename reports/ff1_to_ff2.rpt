@@ -1,0 +1,51 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : complex_design
+Version: T-2022.03-SP2
+Date   : Tue Apr 15 14:52:22 2025
+****************************************
+
+Warning: There is 1 invalid start point. (UITE-416)
+
+  Startpoint: FF1_reg (rising edge-triggered flip-flop clocked by main_clock)
+  Endpoint: FF2_reg (rising edge-triggered flip-flop clocked by main_clock)
+  Path Group: main_clock
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.05(cell)  1.03(net)
+  Min Clock Paths Derating Factor : 0.95(cell)  0.97(net)
+  Max Clock Paths Derating Factor : 1.05(cell)  1.03(net)
+  Max Timing Check Derating Factor : 1.05
+  Sigma: 3.0
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock main_clock (rise edge)                            0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FF1_reg/CLK (sky130_fd_sc_hd__dfrtp_1)                  0.00       0.00 r
+  FF1_reg/Q (sky130_fd_sc_hd__dfrtp_1) <-                 0.38       0.38 f
+  U6/X (sky130_fd_sc_hd__and2_1)                          0.13       0.51 f
+  U7/X (sky130_fd_sc_hd__or2_1)                           0.23       0.74 f
+  U8/X (sky130_fd_sc_hd__buf_1)                           0.09       0.83 f
+  FF2_reg/D (sky130_fd_sc_hd__dfrtp_1)                    0.00       0.84 f
+  data arrival time                                                  0.84
+
+  clock main_clock (rise edge)                           10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock reconvergence pessimism                           0.00      10.00
+  clock uncertainty                                      -0.10       9.90
+  FF2_reg/CLK (sky130_fd_sc_hd__dfrtp_1)                             9.90 r
+  library setup time                                     -0.10       9.80
+  data required time                                                 9.80
+  ------------------------------------------------------------------------------
+  data required time                                                 9.80
+  data arrival time                                                 -0.84
+  ------------------------------------------------------------------------------
+  statistical adjustment                                  0.00       8.97
+  slack (MET)                                                        8.97
+
+
+1

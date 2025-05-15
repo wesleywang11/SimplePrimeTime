@@ -1,0 +1,18 @@
+****************************************
+Report : timing derate
+Design : complex_design
+Version: T-2022.03-SP2
+Date   : Tue Apr 15 14:52:22 2025
+****************************************
+
+                                  ----- Clock ------                  ------ Data ------
+                                Rise              Fall              Rise              Fall
+                           Early     Late    Early     Late    Early     Late    Early     Late
+ ----------------------------------------------------------------------------------------------
+ design: complex_design
+   Net delay static         0.97     1.03     0.97     1.03     0.97     1.03     0.97     1.03
+   Net delay dynamic        0.97     1.03     0.97     1.03     0.97     1.03     0.97     1.03
+   Cell delay               0.95     1.05     0.95     1.05     0.95     1.05     0.95     1.05
+   Cell check               0.95     1.05     0.95     1.05     0.95     1.05     0.95     1.05
+
+1
